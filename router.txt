@@ -1,0 +1,4 @@
+/accountList		get	账户列表
+/addAccount		post	添加账户
+/submitTransaction	post	添加交易
+/historyList		post	查询交易

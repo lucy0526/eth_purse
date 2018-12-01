@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-web3.eth.personal.unlockAccount("0xc18144a148a19b66b9ffc6a7cbfff92deb2ffcc0", "", 600)
+web3.eth.personal.unlockAccount("0xc18144a148a19b66b9ffc6a7cbfff92deb2ffcc0", null, 600)
     .then(function () {
 
         web3.eth.sendTransaction({
@@ -22,5 +22,6 @@ web3.eth.personal.unlockAccount("0xc18144a148a19b66b9ffc6a7cbfff92deb2ffcc0", ""
                 // gas: "1",
             })
             .on('transactionHash', function (hash) {
+                console.log(hash)
             })
     });

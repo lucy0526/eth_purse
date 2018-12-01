@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+
+    <Button
+        android:id="@+id/account_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账户"
+        />
+    <Button
+        android:id="@+id/transaction_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="转账"
+        />
+    <Button
+        android:id="@+id/history_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="记录"
+        />
+    <Button
+        android:id="@+id/mine_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="挖矿"
+        />
+    <!--
+    <WebView
+        android:id="@+id/web_Wvw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+    <TextView
+        android:id="@+id/resData_Tvw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="选择转出账户:"
+        android:textColor="#060000"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Spinner
+        android:id="@+id/accountList_spr"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="密码:"
+        android:textColor="#060000"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/password_edt"
+        android:gravity="center"
+        android:hint="请输入密码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="输入接收账户:"
+        android:layout_marginLeft="10dp"
+        android:textColor="#060000"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/receiver_ett"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="转出数量：:"
+        android:layout_marginLeft="10dp"
+        android:textColor="#060000"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/transactionEth_ett"
+        android:hint="请输入交易数量（geth）"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="选择收取费:"
+        android:layout_marginLeft="10dp"
+        android:textColor="#060000"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/gas_spr"
+        android:entries="@array/gas"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_gravity="right"
+        android:text="转出"
+        android:id="@+id/transaction_submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    
+</LinearLayout>
