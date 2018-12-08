@@ -41,3 +41,4 @@ eth.blockNumber
 eth.getBalance("0xe64a0d68b2e87541964bac5496a739d83fb67376")
 txpool.status
 eth.blockNumber
+cat F:/mProgram/Eth_purse/node/test/keystore/UTC--2018-11-22T13-34-24.412049100Z--c18144a148a19b66b9ffc6a7cbfff92deb2ffcc0 | qrencode -o keystore.png

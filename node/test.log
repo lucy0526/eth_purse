@@ -9792,3 +9792,35 @@ github.com/ethereum/go-ethereum/p2p.(*Server).run.func2.1(0x100cfc0, 0xc04385dc5
 	C:/gopath/src/github.com/ethereum/go-ethereum/p2p/server.go:570 +0x42
 created by github.com/ethereum/go-ethereum/p2p.(*Server).run.func2
 	C:/gopath/src/github.com/ethereum/go-ethereum/p2p/server.go:570 +0x1a1
+INFO [12-08|15:37:35] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [12-08|15:37:35] Starting peer-to-peer node               instance=Geth/v1.8.3-stable-329ac18e/windows-amd64/go1.10
+INFO [12-08|15:37:35] Allocated cache and file handles         database=F:\\mProgram\\Eth_purse\\node\\test\\geth\\chaindata cache=768 handles=1024
+INFO [12-08|15:37:35] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil> Engine: clique}"
+INFO [12-08|15:37:35] Initialising Ethereum protocol           versions="[63 62]" network=1
+WARN [12-08|15:37:35] Head state missing, repairing chain      number=7 hash=fc8413…10384e
+INFO [12-08|15:37:35] Rewound blockchain to past state         number=5 hash=d5153b…7f6294
+INFO [12-08|15:37:35] Loaded most recent local header          number=7 hash=fc8413…10384e td=15
+INFO [12-08|15:37:35] Loaded most recent local full block      number=5 hash=d5153b…7f6294 td=11
+INFO [12-08|15:37:35] Loaded most recent local fast block      number=7 hash=fc8413…10384e td=15
+INFO [12-08|15:37:35] Loaded local transaction journal         transactions=0 dropped=0
+INFO [12-08|15:37:35] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [12-08|15:37:35] Blockchain not empty, fast sync disabled 
+INFO [12-08|15:37:35] Starting P2P networking 
+INFO [12-08|15:37:37] Mapped network port                      proto=udp extport=30303 intport=30303 interface="UPNP IGDv1-IP1"
+INFO [12-08|15:37:37] UDP listener up                          self=enode://90dc7d220ec7083037cd22908a982ad18788302162c667a0f9febfb4425e77237c8108814c7313011ed3c83b2b1a8ca1e111125edd0bcf64ff43eab0b521816c@192.168.31.241:30303
+INFO [12-08|15:37:37] RLPx listener up                         self=enode://90dc7d220ec7083037cd22908a982ad18788302162c667a0f9febfb4425e77237c8108814c7313011ed3c83b2b1a8ca1e111125edd0bcf64ff43eab0b521816c@192.168.31.241:30303
+INFO [12-08|15:37:37] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-08|15:37:37] HTTP endpoint opened                     url=http://0.0.0.0:8545   cors= vhosts=localhost
+INFO [12-08|15:37:37] Mapped network port                      proto=tcp extport=30303 intport=30303 interface="UPNP IGDv1-IP1"
+INFO [12-08|15:37:38] Etherbase automatically configured       address=0xc18144a148a19b66b9ffC6a7cBFFf92deB2ffcC0
+INFO [12-08|15:39:40] HTTP endpoint closed                     url=http://0.0.0.0:8545
+INFO [12-08|15:39:40] IPC endpoint closed                      endpoint=\\\\.\\pipe\\geth.ipc
+INFO [12-08|15:39:40] Writing cached state to disk             block=5 hash=d5153b…7f6294 root=1a7be8…42a1b0
+INFO [12-08|15:39:40] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-08|15:39:40] Writing cached state to disk             block=4 hash=9d17d4…9ffb74 root=42b0be…ba0232
+INFO [12-08|15:39:40] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-08|15:39:40] Blockchain manager stopped 
+INFO [12-08|15:39:40] Stopping Ethereum protocol 
+INFO [12-08|15:39:40] Ethereum protocol stopped 
+INFO [12-08|15:39:40] Transaction pool stopped 
+INFO [12-08|15:39:40] Database closed                          database=F:\\mProgram\\Eth_purse\\node\\test\\geth\\chaindata
