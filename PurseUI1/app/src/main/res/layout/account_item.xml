@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:id="@+id/account_image_imv"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/account_name_tvw"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <LinearLayout
+                android:layout_weight="10"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="0dp">
+                <TextView
+                    android:id="@+id/address_hexString_tvw"
+                    android:layout_weight="10"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:src="@mipmap/copy"
+                    android:layout_height="73dp"
+                    android:id="@+id/imageView2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:src="@mipmap/more1"
+            android:background="#ffff"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/account_money_tvw"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+</LinearLayout>

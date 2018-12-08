@@ -1,4 +1,4 @@
-/accountList		get	账户列表
-/addAccount		post	添加账户
-/submitTransaction	post	添加交易
-/historyList		post	查询交易
+/accountList		get	null			账户列表
+/addAccount		post	password		添加账户
+/submitTransaction	post	from\to\eth\password	添加交易
+/historyList		post	address			查询交易
