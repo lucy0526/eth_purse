@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageButton
+        android:id="@+id/gen_web_back_imb"
         android:background="#ffff"
         android:layout_marginTop="15dp"
         android:src="@mipmap/back"

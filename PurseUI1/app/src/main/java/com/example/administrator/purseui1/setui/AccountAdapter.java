@@ -1,4 +1,4 @@
-package com.example.administrator.purseui1.entity;
+package com.example.administrator.purseui1.setui;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.purseui1.R;
+import com.example.administrator.purseui1.entity.Account;
 
 import java.util.List;
 
