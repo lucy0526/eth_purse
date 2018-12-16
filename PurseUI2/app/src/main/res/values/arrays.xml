@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gas">
+        <item>0.0027</item>
+        <item>0.0037</item>
+        <item>0.0047</item>
+        <item>0.0057</item>
+    </string-array>
+</resources>

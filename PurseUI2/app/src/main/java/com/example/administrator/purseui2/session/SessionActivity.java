@@ -10,7 +10,7 @@ import com.example.administrator.purseui2.R;
 
 public class SessionActivity extends BaseActivity implements View.OnClickListener {
     TextView enterGenWebTvw;
-    
+TextView createUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,9 @@ public class SessionActivity extends BaseActivity implements View.OnClickListene
 
         enterGenWebTvw = (TextView) findViewById(R.id.enter_gen_web_tvw);
         enterGenWebTvw.setOnClickListener(this);
+
+        createUser = (TextView) findViewById(R.id.session_create_user);
+        createUser.setOnClickListener(this);
     }
 
     @Override
@@ -27,6 +30,14 @@ public class SessionActivity extends BaseActivity implements View.OnClickListene
             case R.id.enter_gen_web_tvw:
                 Intent enterGenWebIntent = new Intent(this, GenWebActivity.class);
                 startActivity(enterGenWebIntent);
+                break;
+
+            case R.id.session_create_user:
+                Intent createUserIntent = new Intent(this, RegisterActivity.class);
+                startActivity(createUserIntent);
+                break;
+            default:
+                break;
         }
     }
 }

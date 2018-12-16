@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffff"
+    android:layout_height="match_parent"
+>
+    <ImageButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/back"
+        android:src="@mipmap/back"
+        android:background="#ffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="创建身份"
+            android:textColor="#0e0e0e"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <EditText
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textColorHint="#cecdcd"
+        android:id="@+id/register_userName_edt"
+        android:hint="身份名"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginLeft="10dp"
+        android:background="#e2e0e0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textColorHint="#cecdcd"
+        android:id="@+id/register_userPassword_edt"
+        android:inputType="textPassword"
+        android:hint="密码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginLeft="10dp"
+        android:background="#e2e0e0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:id="@+id/register_reUserPassword_edt"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:layout_marginTop="20dp"
+        android:hint="重复输入密码"
+        android:inputType="textPassword"
+        android:layout_marginLeft="10dp"
+        android:textColorHint="#cecdcd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginLeft="10dp"
+        android:textColorHint="#cecdcd"
+        android:background="#e2e0e0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <EditText
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:layout_marginTop="20dp"
+        android:hint="密码提示信息"
+        android:layout_marginLeft="10dp"
+        android:textColorHint="#cecdcd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register_remind_password_edt" />
+    <View
+        android:layout_marginLeft="10dp"
+        android:background="#e2e0e0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/session_create_user_commit_tvw"
+        android:layout_marginTop="100dp"
+        android:textColor="#ffff"
+        android:text="创建"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:background="#bebebe"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+</LinearLayout>

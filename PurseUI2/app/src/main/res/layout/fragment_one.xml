@@ -1,76 +1,150 @@
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffff"
-    >
+    android:orientation="vertical">
 
-  <android.support.v7.widget.RecyclerView
-      android:id="@+id/account_rcv"
-      android:layout_weight="5"
-      android:layout_width="match_parent"
-      android:layout_height="0dp">
-
-  </android.support.v7.widget.RecyclerView>
-
+    <!-- <android.support.v7.widget.RecyclerView
+         android:id="@+id/account_rcv"
+         android:layout_weight="5"
+         android:layout_width="match_parent"
+         android:layout_height="0dp">
+     </android.support.v7.widget.RecyclerView>-->
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="wrap_content"
+        android:background="#d9e5fc"
+        android:orientation="vertical">
+
         <LinearLayout
-            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/account_image_imv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@mipmap/fly" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/address_hexString_tvw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="GEN-WALLET"
+                    android:textColor="#ffff"
+                    android:textSize="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/account_name_tvw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/copy5" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#d9e5fc"
+                android:src="@mipmap/more1" />
+        </LinearLayout>
+
+        <!--<TextView
+            android:id="@+id/account_money_tvw"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="right" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <TextView
-                android:text="资产"
-                android:textSize="20dp"
-                android:textColor="#080808"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:gravity="center_vertical"
                 android:layout_weight="5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent" />
+                android:gravity="center_vertical"
+                android:text="资产"
+                android:textColor="#080808"
+                android:textSize="20dp" />
+
             <ImageButton
-                android:layout_weight="1"
+                android:id="@+id/transaction_imb"
                 android:layout_width="0dp"
-                android:src="@mipmap/add_small"
-                android:background="#ffff"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_height="match_parent" />
+                android:layout_weight="1"
+                android:background="#ffff"
+                android:src="@mipmap/add_small" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="wrap_content">
 
-          <ImageView
-              android:layout_gravity="center"
-              android:layout_width="58dp"
-              android:layout_height="26dp"
-              app:srcCompat="@mipmap/money"
-              android:id="@+id/imageView"
-              android:layout_weight="0.02" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="58dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.02"
+                app:srcCompat="@mipmap/money" />
 
-          <TextView
-              android:text="GRN"
-              android:layout_marginLeft="50dp"
-              android:gravity="center_vertical"
-              android:textSize="20dp"
-              android:layout_weight="5"
-              android:layout_width="0dp"
-              android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:text="GRN"
+                android:textSize="20dp" />
 
-          <TextView
-              android:layout_weight="1"
-              android:gravity="center_vertical"
-              android:layout_width="0dp"
-              android:text="0￥"
-              android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="0￥"
+                android:id="@+id/textView" />
 
         </LinearLayout>
 

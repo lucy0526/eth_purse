@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 import com.example.administrator.purseui2.R;
-import com.example.administrator.purseui2.entity.Account;
+import com.example.administrator.purseui2.entity.Account_Node;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ import java.util.List;
  * Created by Administrator on 2018/12/6.
  */
 
-public class AccountAdapter extends ArrayAdapter<Account>{
+public class AccountAdapter extends ArrayAdapter<Account_Node>{
     private int resourceId;
 
-    public AccountAdapter(Context context, int resource, List<Account> objects) {
+    public AccountAdapter(Context context, int resource, List<Account_Node> objects) {
         super(context, resource, objects);
         resourceId = resource;
     }
@@ -30,7 +30,7 @@ public class AccountAdapter extends ArrayAdapter<Account>{
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Account account = getItem(position);
+        Account_Node account = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
 
         ImageView accountImageImv = (ImageView) view.findViewById(R.id.account_image_imv);
