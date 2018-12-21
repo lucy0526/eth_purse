@@ -9978,3 +9978,50 @@ INFO [12-16|13:00:04] Regenerated local transaction journal    transactions=0 ac
 INFO [12-16|14:00:04] Regenerated local transaction journal    transactions=0 accounts=0
 INFO [12-16|15:00:04] Regenerated local transaction journal    transactions=0 accounts=0
 INFO [12-16|16:00:04] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|12:45:53] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [12-17|12:45:53] Starting peer-to-peer node               instance=Geth/v1.8.3-stable-329ac18e/windows-amd64/go1.10
+INFO [12-17|12:45:53] Allocated cache and file handles         database=F:\\mProgram\\Eth_purse\\node\\test\\geth\\chaindata cache=768 handles=1024
+INFO [12-17|12:45:53] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil> Engine: clique}"
+INFO [12-17|12:45:53] Initialising Ethereum protocol           versions="[63 62]" network=1
+WARN [12-17|12:45:53] Head state missing, repairing chain      number=7 hash=fc8413…10384e
+INFO [12-17|12:45:53] Rewound blockchain to past state         number=5 hash=d5153b…7f6294
+INFO [12-17|12:45:53] Loaded most recent local header          number=7 hash=fc8413…10384e td=15
+INFO [12-17|12:45:53] Loaded most recent local full block      number=5 hash=d5153b…7f6294 td=11
+INFO [12-17|12:45:53] Loaded most recent local fast block      number=7 hash=fc8413…10384e td=15
+INFO [12-17|12:45:53] Loaded local transaction journal         transactions=0 dropped=0
+INFO [12-17|12:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [12-17|12:45:53] Blockchain not empty, fast sync disabled 
+INFO [12-17|12:45:53] Starting P2P networking 
+INFO [12-17|12:45:55] UDP listener up                          self=enode://90dc7d220ec7083037cd22908a982ad18788302162c667a0f9febfb4425e77237c8108814c7313011ed3c83b2b1a8ca1e111125edd0bcf64ff43eab0b521816c@[::]:30303
+INFO [12-17|12:45:55] RLPx listener up                         self=enode://90dc7d220ec7083037cd22908a982ad18788302162c667a0f9febfb4425e77237c8108814c7313011ed3c83b2b1a8ca1e111125edd0bcf64ff43eab0b521816c@[::]:30303
+INFO [12-17|12:45:55] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-17|12:45:55] HTTP endpoint opened                     url=http://0.0.0.0:8545   cors= vhosts=localhost
+INFO [12-17|12:45:56] Etherbase automatically configured       address=0xc18144a148a19b66b9ffC6a7cBFFf92deB2ffcC0
+INFO [12-17|13:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|14:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|15:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|16:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|17:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|18:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|19:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|20:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-17|21:45:53] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [12-21|14:48:58] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [12-21|14:48:58] Starting peer-to-peer node               instance=Geth/v1.8.3-stable-329ac18e/windows-amd64/go1.10
+INFO [12-21|14:48:58] Allocated cache and file handles         database=F:\\mProgram\\Eth_purse\\node\\test\\geth\\chaindata cache=768 handles=1024
+INFO [12-21|14:48:58] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil> Engine: clique}"
+INFO [12-21|14:48:58] Initialising Ethereum protocol           versions="[63 62]" network=1
+WARN [12-21|14:48:58] Head state missing, repairing chain      number=7 hash=fc8413…10384e
+INFO [12-21|14:48:58] Rewound blockchain to past state         number=5 hash=d5153b…7f6294
+INFO [12-21|14:48:58] Loaded most recent local header          number=7 hash=fc8413…10384e td=15
+INFO [12-21|14:48:58] Loaded most recent local full block      number=5 hash=d5153b…7f6294 td=11
+INFO [12-21|14:48:58] Loaded most recent local fast block      number=7 hash=fc8413…10384e td=15
+INFO [12-21|14:48:58] Loaded local transaction journal         transactions=0 dropped=0
+INFO [12-21|14:48:58] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [12-21|14:48:58] Blockchain not empty, fast sync disabled 
+INFO [12-21|14:48:58] Starting P2P networking 
+INFO [12-21|14:49:01] UDP listener up                          self=enode://90dc7d220ec7083037cd22908a982ad18788302162c667a0f9febfb4425e77237c8108814c7313011ed3c83b2b1a8ca1e111125edd0bcf64ff43eab0b521816c@[::]:30303
+INFO [12-21|14:49:01] RLPx listener up                         self=enode://90dc7d220ec7083037cd22908a982ad18788302162c667a0f9febfb4425e77237c8108814c7313011ed3c83b2b1a8ca1e111125edd0bcf64ff43eab0b521816c@[::]:30303
+INFO [12-21|14:49:01] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-21|14:49:01] HTTP endpoint opened                     url=http://0.0.0.0:8545   cors= vhosts=localhost
+INFO [12-21|14:49:01] Etherbase automatically configured       address=0xc18144a148a19b66b9ffC6a7cBFFf92deB2ffcC0

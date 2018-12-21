@@ -73,7 +73,6 @@ public class RegisterActivity extends BaseActivity {
                     alertDialog.setPositiveButton("知道了", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
                         }
                     });
                     alertDialog.show();
@@ -92,6 +91,7 @@ public class RegisterActivity extends BaseActivity {
         user.save();
 
         BaseActivity.myself.setUserId(user.getUserId());
+        BaseActivity.userPassword = password;
         Intent mainIntent = new Intent(RegisterActivity.this, MainActivity.class);
         startActivity(mainIntent);
     }

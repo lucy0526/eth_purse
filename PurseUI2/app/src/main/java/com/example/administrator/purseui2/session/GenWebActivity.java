@@ -22,7 +22,6 @@ public class GenWebActivity extends BaseActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gen_web);
-
         setCustomActionBar();
 
 //        View genWebActionbarView = LayoutInflater.from(this).inflate(R.layout.gen_web_actionbar, null);

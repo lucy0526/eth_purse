@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffff"
     android:orientation="vertical">
 
     <View
@@ -59,29 +60,35 @@
 
     <EditText
         android:id="@+id/transaction_to_edt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
         android:hint="请输入地址"
         android:textColorHint="#dedede"
         android:textSize="15dp" />
+
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
-            android:textColor="#101010"
-            android:text="备注"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="备注"
+            android:textColor="#101010" />
+
         <EditText
             android:id="@+id/transaction_remark_edt"
-            android:layout_marginLeft="10dp"
-            android:textSize="10dp"
-            android:hint="(选填)"
-            android:gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:hint="(选填)"
+            android:textSize="10dp" />
     </LinearLayout>
 
     <View
@@ -116,11 +123,11 @@
 
     <TextView
         android:id="@+id/commit_transaction"
-        android:background="#ffff"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="交易" />
+        android:layout_marginTop="10dp"
+        android:background="#ffff"
+        android:gravity="center"
+        android:text="交易"
+        android:textSize="18dp" />
 </LinearLayout>

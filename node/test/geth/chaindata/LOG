@@ -251,3 +251,23 @@
 20:00:01.940082 table@remove removed @55
 20:00:01.940583 table@remove removed @52
 20:00:01.949841 table@remove removed @51
+=============== Dec 17, 2018 (CST) ===============
+12:45:53.625555 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:45:53.625555 version@stat F·[0 1] S·37KiB[0B 37KiB] Sc·[0.00 0.00]
+12:45:53.625555 db@open opening
+12:45:53.625555 journal@recovery F·1
+12:45:53.627560 journal@recovery recovering @62
+12:45:53.655505 memdb@flush created L0@65 N·2 S·243B "Blo..ion,v658":"Las..der,v659"
+12:45:53.658405 version@stat F·[1 1] S·37KiB[243B 37KiB] Sc·[0.25 0.00]
+12:45:53.712351 db@janitor F·4 G·0
+12:45:53.712351 db@open done T·86.7954ms
+=============== Dec 21, 2018 (CST) ===============
+14:48:58.676703 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:48:58.708925 version@stat F·[1 1] S·37KiB[243B 37KiB] Sc·[0.25 0.00]
+14:48:58.708925 db@open opening
+14:48:58.708925 journal@recovery F·1
+14:48:58.710930 journal@recovery recovering @66
+14:48:58.733991 memdb@flush created L0@68 N·2 S·243B "Blo..ion,v661":"Las..der,v662"
+14:48:58.735996 version@stat F·[2 1] S·38KiB[486B 37KiB] Sc·[0.50 0.00]
+14:48:58.760299 db@janitor F·5 G·0
+14:48:58.760299 db@open done T·51.3744ms

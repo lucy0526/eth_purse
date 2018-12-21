@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.purseui2.entity.Account;
 import com.example.administrator.purseui2.entity.SqlHelper;
@@ -24,6 +25,7 @@ import org.web3j.crypto.WalletUtils;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.Web3jFactory;
 import org.web3j.protocol.core.DefaultBlockParameterName;
+import org.web3j.protocol.core.Response;
 import org.web3j.protocol.core.methods.response.EthGetTransactionCount;
 import org.web3j.protocol.core.methods.response.EthSendTransaction;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
@@ -41,10 +43,11 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 
-public class TransactionActivity extends AppCompatActivity {
+public class TransactionActivity extends BaseActivity {
     private static final String TAG = "TransactionActivity";
     private String gasTxt;
     Spinner gasSpn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +55,15 @@ public class TransactionActivity extends AppCompatActivity {
         TextView transactionCommitTxv = (TextView) findViewById(R.id.commit_transaction);
 
         gasSpn = (Spinner) findViewById(R.id.gas_spr);
-        gasSpn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gasSpn.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
                 gasTxt = gasSpn.getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
             }
         });
         transactionCommitTxv.setOnClickListener(new View.OnClickListener() {
@@ -71,23 +79,37 @@ public class TransactionActivity extends AppCompatActivity {
         protected Object doInBackground(Object[] params) {
             return null;
         }
+
         @Override
         protected void onPostExecute(Object o) {
             try {
                 super.onPostExecute(o);
 
-                Web3j web3 = Web3jFactory.build(new HttpService("http://192.168.100.113:8545/"));
+                Web3j web3 = Web3jFactory.build(new HttpService(BaseActivity.genPointPath));
                 String from = BaseActivity.myself.getAddress();
                 String to = ((EditText) findViewById(R.id.transaction_to_edt)).getText().toString();
-                BigInteger value = BigInteger.valueOf(Integer.parseInt(((EditText) findViewById(R.id.transaction_money_edt)).getText().toString()));
+                String valueText = ((EditText) findViewById(R.id.transaction_money_edt)).getText().toString();
+                if (valueText == null || valueText.trim().isEmpty()) {
+                    Toast.makeText(TransactionActivity.this, "交易地址有误！", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                BigInteger value = BigInteger.valueOf(Integer.parseInt(valueText));
 
                 String password = SqlHelper.findUserByUserId(BaseActivity.myself.getUserId()).getUserPassword();
                 Credentials credentials = WalletUtils.loadCredentials(password, BaseActivity.myself.getKeystoreName());
                 BigInteger gasPrice = BigInteger.valueOf(Integer.parseInt(gasTxt));
                 BigInteger gasLimit = BigInteger.valueOf(21000);
-                String Data = ((EditText) findViewById(R.id.transaction_remark_edt)).getText().toString();
+                String data = "";
+                data = ((EditText) findViewById(R.id.transaction_remark_edt)).getText().toString();
+                EthSendTransaction transaction = transfer(web3, from, to, value, credentials, gasPrice, gasLimit, data);
+                String log = transaction.getTransactionHash();
+                String response = transaction.getRawResponse();
+                Response.Error err = transaction.getError();
+                String mess = err.getMessage();
+                String re = transaction.getResult();
 
-                transfer(web3, from, to, value, credentials, gasPrice, gasLimit, Data);
+
+                Log.d("===", "onPostExecute: "+mess);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -96,12 +118,12 @@ public class TransactionActivity extends AppCompatActivity {
         /**
          * 发起一笔交易（自定义参数）
          *
-         * @param from       发起人钱包地址
-         * @param to         转入的钱包地址
-         * @param value      转账金额，单位是wei
-         * @param gasPrice   转账费用
+         * @param from     发起人钱包地址
+         * @param to       转入的钱包地址
+         * @param value    转账金额，单位是wei
+         * @param gasPrice 转账费用
          * @param gasLimit
-         * @param data       备注的信息
+         * @param data     备注的信息
          */
         public EthSendTransaction transfer(Web3j web3,
                                            String from,
@@ -120,6 +142,7 @@ public class TransactionActivity extends AppCompatActivity {
             String hexValue = Numeric.toHexString(signMessage);
             //发送交易
             EthSendTransaction ethSendTransaction = web3.ethSendRawTransaction(hexValue).sendAsync().get();
+
             return ethSendTransaction;
         }
 

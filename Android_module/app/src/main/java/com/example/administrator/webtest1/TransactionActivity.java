@@ -72,7 +72,7 @@ public class TransactionActivity extends AppCompatActivity {
                     password = null;
                 }
 
-                new SubmitLongTimeTask().executeOnExecutor(Executors.newCachedThreadPool(), new Object[]{from, to, value, gas, password});
+
             }
         });
 

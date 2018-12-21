@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.purseui1.session.GenWebActivity">
+    tools:context="com.example.administrator.purseui2.session.GenWebActivity">
 <WebView
     android:id="@+id/gen_web_wbv"
     android:layout_width="match_parent"
