@@ -1,6 +1,8 @@
 package com.example.administrator.purseui2;
 
+import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 import com.example.administrator.purseui2.entity.Account;
 import com.example.administrator.purseui2.entity.SqlHelper;
 import com.example.administrator.purseui2.fragment.OneFragment;
+import com.example.administrator.purseui2.session.RegisterActivity;
 
 import org.litepal.LitePal;
 import org.litepal.crud.DataSupport;
@@ -107,7 +110,20 @@ public class TransactionActivity extends BaseActivity {
                 Response.Error err = transaction.getError();
                 String mess = err.getMessage();
                 String re = transaction.getResult();
+                Toast.makeText(TransactionActivity.this, mess, Toast.LENGTH_LONG).show();
 
+                if (err != null) {
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(TransactionActivity.this);
+                    alertDialog.setTitle("Transaction Failure:");
+                    alertDialog.setMessage(mess);
+                    alertDialog.setCancelable(true);
+                    alertDialog.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    });
+                    alertDialog.show();
+                }
 
                 Log.d("===", "onPostExecute: "+mess);
             } catch (Exception e) {
